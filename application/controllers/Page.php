@@ -7,6 +7,10 @@ class Page extends CI_Controller
    {
       parent::__construct();
       $this->load->model('KaryModel');
+      $this->load->model('InsModel');
+      $this->load->model('LoketModel');
+      $this->load->model('TextModel');
+      $this->load->model('TransModel');
       $this->load->library('form_validation');
    }
 
