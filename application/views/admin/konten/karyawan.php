@@ -19,9 +19,9 @@
               <tr>
                 <th width="3px">No.</th>
                 <th>Nama Karyawan</th>
+                <th>Username</th>
                 <th>Telp</th>
                 <th>Alamat</th>
-                <th>Username</th>
                 <th>Aksi</th>
               </tr>
             </thead>
@@ -31,11 +31,15 @@
                 <tr>
                   <th scope="row"><?= $i++; ?></th>
                   <td><?= $ars['nama']; ?></td>
+                  <td><?= $ars['username']; ?> </td>
                   <td><?= $ars['telp']; ?></td>
                   <td><?= $ars['alamat']; ?></td>
-                  <td><?= $ars['username']; ?>
+                  <td>
+                    <a href="<?= base_url(); ?>Page/hapusDatakaryawan/<?= $ars['username']; ?>" class="badge badge-danger float-none"><i class="far fa-trash-alt"></i></a>
+                    <a href="<?= base_url(); ?>Page/hapusDatakaryawan/<?= $ars['username']; ?>" class="badge badge-danger float-none"><i class="far fa-trash-alt"></i></a>
 
                   </td>
+
                 </tr>
               <?php endforeach; ?>
             </tbody>
@@ -87,7 +91,7 @@
                       </div>
                       <div class="col-md-12">
                         <br>
-                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <button type="submit" name="simpan" class="btn btn-primary">Simpan</button>
                         <button type="reset" class="btn btn-danger">Reset</button>
                       </div>
                     </form>
@@ -134,14 +138,15 @@
             <label for="sel1">Level</label>
             <select name="level" class="form-control" required="" onchange="" id="lev1">
               <option value="">--Pilih Level--</option>
-              <option>Admin</option>
+              <option value="Admin">Admin</option>
               <option value="Penjaga">Penjaga Loket</option>
             </select>
             <label for="sel1" id="l1">Loket</label>
             <select name="id_loket" class="form-control" id="id_loket1">
-              <option value="0">--Pilih Loket--</option>
+              <option value="">--Pilih Loket--</option>
 
-              <option>Loket 1</option>
+              <option value="1">Loket 1</option>
+              <option value="2">Loket 2</option>
 
             </select>
             <label for="sel1">Password</label>
@@ -153,7 +158,7 @@
             <br>
           </div>
           <br>
-          <button type="submit" class="btn btn-primary" id="simpan">Simpan</button>
+          <button type="submit" name="submit" class="btn btn-primary" id="simpan">Simpan</button>
           <button type="reset" class="btn btn-danger">Reset</button>
         </form>
       </div>

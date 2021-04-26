@@ -2,7 +2,7 @@
 
 class KaryModel extends CI_Model
 {
-    public function getALlkaryawan()
+    public function getAllkaryawan()
     {
         return $this->db->get('karyawan')->result_array();
     }
@@ -14,7 +14,7 @@ class KaryModel extends CI_Model
             "nama" => $this->input->post('nama', true),
             "telp" => $this->input->post('telp', true),
             "level" => $this->input->post('level', true),
-            'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
+            'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
             "alamat" => $this->input->post('alamat', true),
             "id_loket" => $this->input->post('id_loket', true),
         ];

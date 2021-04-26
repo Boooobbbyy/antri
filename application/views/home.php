@@ -11,13 +11,13 @@
 						<div id="carousel-example-captions" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner" id="slide">
 								<div class="item active">
-									<img class="img-responsive" data-src="" alt="900x500" src="<?php echo base_url('assets/img/Lambang_Kabupaten.png') ?>">
+									<img class="img-responsive" data-src="" style="height:300px;width:80%;margin-left: auto; margin-right: auto;" src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Lambang_Kabupaten_Way_Kanan.png">
 									<div class="carousel-caption">
 										<h3>AGENDA INI</h3>
 									</div>
 								</div>
 								<div class="item">
-									<img class="img-responsive" data-src="" alt="900x500" src="<?php echo base_url('assets/img/Lambang_Kabupaten.png') ?>">
+									<img class="img-responsive" data-src="" alt="900x500" src="<?php echo base_url('assets/img/Lambang_Kabupaten.png')  ?>">
 									<div class="carousel-caption">
 										<h3>AGENDA ITUU</h3>
 									</div>
